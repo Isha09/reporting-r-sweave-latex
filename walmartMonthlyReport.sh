@@ -1,16 +1,16 @@
 ###########################################################################################################
 #                                                                                                         #
-# This script creates and sends monthly Walmart sales stats to Walmart manager.                           #
-# The report contains monthly sales for each store located in US,                                         #
+# This script creates and emails monthly Walmart sales stats report.                                      #
+# The report contains monthly sales for each walmart store      ,                                         #
 # Average Holiday/NonHoliday Sales and comparison of previous and current month sales                     #
 # Author - Esha chaudhary                                                                                 #
-# 12-26-2016 - created first version                                                                      #
-# 12-27-2016 - created config file to be used in script                                                   #
+#                                                                                                         #
+#                                                                                                         #
 ###########################################################################################################
 
 #!/bin/bash
 #enter month and year for which report needs to be generated
-source /home/cloudera/Desktop/walmartConfig
+source <path to config file>/walmartConfig
 
 echo "Preparing Walmart report for "$monthname"-"$year
 
