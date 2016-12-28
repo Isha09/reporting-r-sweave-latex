@@ -14,7 +14,9 @@ _walmartMonthlyReport.rnw_ - The sweave scripts contains R code that draws the g
 
 **Report shows the following stats:**
 1. In a given month,list stores doing good to bad.(Represented using bar plot)
+
 2. In a given month compare average holiday/NonHoliday Sales.(Represented using bar plot)
+
 3. In a given month compare the sales with all previous months. (Represented using pie chart)
 
 **Data Explanation:**
