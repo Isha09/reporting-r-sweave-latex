@@ -1,18 +1,10 @@
-month="09"
-
-year="2010"
-
-monthname="Sep"
-
-path="path to R/sweave scripts"
-
+month=<month in MM format>
+year=<year in YYYY format>
+monthname=<Monthname>
+path=<path to R/sweave scripts>
 user=<MySQL username>
-
 pwd=<MySQL pwd>
 dbname="walmart"
-
 rScript="walmartSales"
-
 texScript="walmartMonthlyReport"
-
 mgrEmail=<Email>
