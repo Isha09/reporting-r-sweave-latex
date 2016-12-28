@@ -47,7 +47,7 @@ assign("12","Dec",envir=hashmp)
 
 
 #Calling Sweave script to draw the graphs for monthly sales report#
-Sweave("/home/cloudera/Desktop/walmartMonthlyReport.rnw")
+Sweave("<path to sweave script>/walmartMonthlyReport.rnw")
 
 #Closing Database connection#
 dbDisconnect(myDbConn)
