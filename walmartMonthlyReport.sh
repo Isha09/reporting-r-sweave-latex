@@ -9,7 +9,7 @@
 ###########################################################################################################
 
 #!/bin/bash
-#enter month and year for which report needs to be generated
+#take params from config file
 source <path to config file>/walmartConfig
 
 echo "Preparing Walmart report for "$monthname"-"$year
