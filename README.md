@@ -13,6 +13,7 @@ _walmartSales.r_ - This R scripts extracts data for the stats to be represented 
 _walmartMonthlyReport.rnw_ - The sweave scripts contains R code that draws the graphs and finally creates the tex file to be used to create the final report.
 
 **Report shows the following stats:**
+
 1. In a given month,list stores doing good to bad.(Represented using bar plot)
 
 2. In a given month compare average holiday/NonHoliday Sales.(Represented using bar plot)
