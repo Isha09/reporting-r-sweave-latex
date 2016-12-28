@@ -1,0 +1,18 @@
+month="09"
+
+year="2010"
+
+monthname="Sep"
+
+path="path to R/sweave scripts"
+
+user=<MySQL username>
+
+pwd=<MySQL pwd>
+dbname="walmart"
+
+rScript="walmartSales"
+
+texScript="walmartMonthlyReport"
+
+mgrEmail=<Email>
