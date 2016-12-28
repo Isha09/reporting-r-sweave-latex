@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{Sweave}
+\usepackage{hyperref}
+
+\SweaveOpts{concordance=TRUE}
+\title{Walmart Sales Report - \Sexpr{mnthName},\Sexpr{yr}}
+\author{Esha Chaudhary}
+
+\begin{document}
+\maketitle
+\section{Walmart stores monthly sales}
+
+The below graph shows \Sexpr{mnthName},\Sexpr{yr} sales for all walmart stores.
+
+\begin{center}
+
+<<echo=FALSE,fig=TRUE>>=
+ggplot(data=monthlySalesResults, aes(x=reorder(store,-salesPerMonth),salesPerMonth,fill=store)) + 
+geom_bar(stat="identity",colour="black",size=0.1) + labs(x = "Store Number", y = "Sales this month") + 
+coord_flip()
+@
+\end{center}
+
+\newpage
+
+\section{Average Holiday/Non Holiday Sales}
+
+The below graph shows the average Holiday/Non Holiday sales for the \Sexpr{mnthName},\Sexpr{yr}
+
+\begin{center}
+<<echo=FALSE,fig=TRUE,height=3>>=
+ggplot(data=avgSalesResults, aes(x=isHoliday, y=avgSales, fill=isHoliday)) + geom_bar(position=position_dodge(0.9),colour="black",stat="identity",width=0.7,show.legend=FALSE) + geom_text(aes(label=avgSales), vjust=1.6, color="black", size=3.5)
+@
+\end{center}
+
+\newpage
+
+\section{Walmart sales for previous and current month}
+
+The below graph shows the average sales for the \Sexpr{mnthName} as well as previous months.
+\begin{center}
+<<echo=FALSE,fig=TRUE,height=5>>=
+pchart<-ggplot(transform(transform(oldMonthSalesResults, avgMonthlySales=avgMonthlySales/sum(avgMonthlySales)), labPos=cumsum(avgMonthlySales)-avgMonthlySales/2), aes(x="", y=avgMonthlySales, fill=month)) + geom_bar(colour="black",stat="identity",width=1)
+pchart + coord_polar("y", start=0)+geom_text(aes(y=labPos, label=scales::percent(avgMonthlySales)))
+@
+\end{center}
+
+
+
+\end{document}
